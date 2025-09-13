@@ -36,15 +36,15 @@ export const mockProfiles: MockProfile[] = [
   },
   {
     id: "002",
-    name: "Michael Chen",
-    age: 35,
-    occupation: "Data Scientist",
-    location: "Seattle, WA",
+    name: "Narendra Modi",
+    age: 65,
+    occupation: "Politician",
+    location: "Gujarat,India",
     profileImage:
       "/images/modi.jpg",
     eyeImage:
-      "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg",
-    lastSeen: "2024-01-20",
+      "/images/modieye.jpg",
+    lastSeen: "2025-08-20",
     verified: true,
   },
   // ➕ add more profiles here
