@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import { ArrowLeft, User, MapPin, Briefcase, Calendar, Star, Eye, RefreshCw, Download } from 'lucide-react';
 import { MatchResult } from '../App';
 
@@ -12,13 +12,22 @@ interface ResultsInterfaceProps {
 const ResultsInterface: React.FC<ResultsInterfaceProps> = ({ matchResult, capturedImage, statusMessage, onBack }) => {
   if (!matchResult) {
   return (
-    <div className="min-h-screen flex items-center justify-center text-center px-4">
-      <p className="text-white text-lg sm:text-xl">
-        {statusMessage || "User Not Found"}
-      </p>
+    <div className="min-h-screen flex flex-col items-center justify-center text-center px-4">
+      <div className="bg-red-500/20 border border-red-400/30 rounded-2xl p-6 max-w-md">
+        <p className="text-red-300 text-lg sm:text-xl font-semibold mb-4">
+          {statusMessage || "❌ User Not Found"}
+        </p>
+        <button
+          onClick={onBack}
+          className="mt-2 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition-colors"
+        >
+          🔙 Back to Scan
+        </button>
+      </div>
     </div>
   );
 }
+
 
 
   const getConfidenceColor = (confidence: number) => {
@@ -175,8 +184,8 @@ const ResultsInterface: React.FC<ResultsInterfaceProps> = ({ matchResult, captur
                     <span className="text-white font-mono text-sm">#{matchResult.id.padStart(6, '0')}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-400 text-sm">Last Updated</span>
-                    <span className="text-white text-sm">{new Date(matchResult.lastSeen).toLocaleDateString()}</span>
+                    <span className="text-gray-400 text-sm">Phone Number</span>
+                    <span className="text-white text-sm">{(matchResult.lastSeen)}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400 text-sm">Database Status</span>

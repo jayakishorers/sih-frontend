@@ -10,7 +10,7 @@ export interface MockProfile {
   location: string;
   profileImage: string;
   eyeImage: string;
-  lastSeen: string;
+  phoneNumber: string;
   verified: boolean;
   embeddings?: Float32Array[];   // ✅ embeddings stored here after generation
 }
@@ -31,20 +31,33 @@ export const mockProfiles: MockProfile[] = [
     location: "San Francisco, CA",
     profileImage: "/images/check.webp",
     eyeImage: "/images/check.webp",
-    lastSeen: "2024-01-15",
+    phoneNumber: "6383112232",
     verified: true,
   },
   {
     id: "002",
     name: "Narendra Modi",
-    age: 65,
+    age: 75,
     occupation: "Politician",
     location: "Gujarat,India",
     profileImage:
       "/images/modi.jpg",
     eyeImage:
-      "/images/modieye.jpg",
-    lastSeen: "2025-08-20",
+      "/images/modi.jpg",
+    phoneNumber: "9789128581",
+    verified: true,
+  },
+  {
+    id: "003",
+    name: "Abdul Kalam",
+    age: 65,
+    occupation: "Scientist,Former President",
+    location: "Tamil Nadu,India",
+    profileImage:
+      "/images/abdulkalam.jpg",
+    eyeImage:
+      "/images/abdulkalam.jpg",
+    phoneNumber: "9789128581",
     verified: true,
   },
   // ➕ add more profiles here

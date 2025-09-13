@@ -152,7 +152,7 @@ const result: MatchResult = {
   occupation: bestMatch.profile.occupation,
   location: bestMatch.profile.location,
   confidence: Math.round(Math.max(0, 1 - bestMatch.distance) * 100),
-  lastSeen: bestMatch.profile.lastSeen,
+  lastSeen: bestMatch.profile.phoneNumber,
   profileImage: bestMatch.profile.profileImage,
   verified: bestMatch.profile.verified,
 };

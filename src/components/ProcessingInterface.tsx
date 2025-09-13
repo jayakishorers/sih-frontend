@@ -75,7 +75,7 @@ const ProcessingInterface: React.FC<ProcessingInterfaceProps> = ({ capturedImage
           occupation: profile.occupation,
           location: profile.location,
           confidence: 1 - bestMatch.distance, // approximate confidence
-          lastSeen: profile.lastSeen,
+          lastSeen: profile.phoneNumber,
           profileImage: profile.profileImage,
           verified: profile.verified,
         };
